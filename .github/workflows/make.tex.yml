@@ -33,5 +33,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           docker run -w /root -v $GITHUB_WORKSPACE:/root/  texlive/texlive xelatex README.tex
-          git commit -m "auto make pdf" && git push
+            git config --global user.email "greolus@gmail.com"
+            git config --global user.name  "greolus"
+            git commit -m "auto make pdf" && git push
           
