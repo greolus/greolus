@@ -35,5 +35,5 @@ jobs:
           docker run -w /root -v $GITHUB_WORKSPACE:/root/  texlive/texlive xelatex README.tex
             git config --global user.email "greolus@gmail.com"
             git config --global user.name  "greolus"
-            git commit -m "auto make pdf" && git push
+            git add README.pdf  git commit -m "auto make pdf" && git push
           
