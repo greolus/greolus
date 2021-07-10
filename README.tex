@@ -2,6 +2,7 @@
 \usepackage{geometry}
 \usepackage{xcolor}
 \usepackage{pgf-pie} % the package used to implement the pie charts
+\usepackage[pdf]{graphviz}
 
 \begin{document}
 \Huge boggy chicken \small
@@ -18,4 +19,12 @@
 \begin{tikzpicture}
 \pie  {1/dumb, 10/silly, 15/funny, 15/fun, 30/strong, 29/smart}
 \end{tikzpicture}
+
+
+\begin{document}
+   \digraph{abc}{
+      rankdir=LR;
+      a -> b -> c;
+   }
+
 \end{document}
