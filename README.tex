@@ -2,7 +2,9 @@
 \usepackage{geometry}
 \usepackage{xcolor}
 \usepackage{pgf-pie} % the package used to implement the pie charts
-\usepackage[pdf]{graphviz}
+\usepackage[autosize]{dot2texi}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
 
 \begin{document}
 \Huge boggy chicken \small
@@ -21,9 +23,11 @@
 \end{tikzpicture}
 
 
-\digraph{abc}{
-   rankdir=LR;
-   a -> b -> c;
+\begin{dot2tex}[neato,mathmode]
+digraph G {
+node [shape="circle"];
+a_1 -> a_2 -> a_3 -> a_4 -> a_1;
 }
+\end{dot2tex}
 
 \end{document}
